@@ -1,0 +1,22 @@
+Description: Change mkisofs for genisoimage
+ Change ....
+Author: Iván Hoffmann <digital.h@gmail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+--- a/src/Config.h.orig	2014-02-25 07:58:28.000000000 -0300
++++ b/src/Config.h	2014-12-19 16:14:41.568070631 -0300
+@@ -78,8 +78,8 @@ const wxString DEF_AVCONV_CMD    = _T("a
+ const wxString DEF_MPLEX_CMD     = _T("mplex -f 8 -S 0 -M -V -o \"$FILE_OUT\" \"$FILE_VIDEO\" \"$FILE_AUDIO\"");
+ const wxString DEF_SPUMUX_CMD    = _T("spumux -P -s $STREAM \"$FILE_CONF\"");
+ const wxString DEF_DVDAUTHOR_CMD = _T("dvdauthor -o \"$DIR\" -x \"$FILE_CONF\"");
+-const wxString DEF_ISO_CMD       = _T("mkisofs -V \"$VOL_ID\" -o \"$FILE\" -dvd-video \"$DIR\"");
+-const wxString DEF_ISO_SIZE_CMD  = _T("mkisofs -quiet -print-size \"$DIR\"");
++const wxString DEF_ISO_CMD       = _T("genisoimage -V \"$VOL_ID\" -o \"$FILE\" -dvd-video \"$DIR\"");
++const wxString DEF_ISO_SIZE_CMD  = _T("genisoimage -quiet -print-size \"$DIR\"");
+ const wxString DEF_BURN_SCAN_CMD = _T("dvd+rw-mediainfo $DEVICE");
+ const wxString DEF_BURN_CMD      = _T("growisofs -V \"$VOL_ID\" -dvd-compat -Z $DEV -dvd-video \"$DIR\" $SPEEDSTR");
+ const wxString DEF_BURN_SPEED_OPT= _T("-speed=$SPEED");
