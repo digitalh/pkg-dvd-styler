@@ -5,7 +5,7 @@ Maintainer: Iván Hoffmann <digital.h@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), dvdauthor, libavcodec-dev, libavformat-dev,
     libavfilter-dev, libexif-dev, libwxgtk3.0-dev, libwxgtk-media3.0-dev, 
     libwxsvg-dev, libxine2-dev, flex, libav-tools, xmlto, libudev-dev, zip,
-    genisoimage, growisofs, libjpeg-dev
+    genisoimage, growisofs, libjpeg-dev, libavutil-dev
 Standards-Version: 3.9.3
 Homepage: http://www.dvdstyler.org/
 Vcs-Git: https://github.com/digitalh/pkg-dvd-styler.git

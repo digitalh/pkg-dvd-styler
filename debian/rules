@@ -18,4 +18,5 @@ export DH_OPTIONS=-v
 	dh $@ 
 
 override_dh_auto_configure:
+#MKISOFS_PATH=/usr/bin/genisoimage CXXFLAGS="-DUSE_FFMPEG=1" dh_auto_configure
 	MKISOFS_PATH=/usr/bin/genisoimage dh_auto_configure

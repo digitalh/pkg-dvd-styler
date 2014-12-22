@@ -1,1 +1,3 @@
 default_apps.patch
+mediaenc_ffmpeg.cpp.patch
+mediatrc_ffmpeg.cpp.patch

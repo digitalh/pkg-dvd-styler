@@ -1,0 +1,20 @@
+Description: Fixes muxrate out of range
+ Fixes avconv muxrate value that is out of range.
+Author: Iván Hoffmann <digital.h@gmail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+--- src/mediatrc_ffmpeg.cpp.orig        2014-04-27 16:12:44.000000000 -0300
++++ src/mediatrc_ffmpeg.cpp     2014-12-22 16:58:46.325089737 -0300
+@@ -111,7 +111,7 @@ bool wxFfmpegMediaTranscoder::SetOutputF
+                AddVideoOption(wxT("bufsize"), 0, wxT("1835008")); // 224*1024*8;
+ 
+                AddOption(wxT("packetsize"), wxT("2048"));  // from www.mpucoder.com: DVD sectors contain 2048 bytes of data, this is also the size of one pack.
+-               AddOption(wxT("muxrate"), wxT("10080000")); // from mplex project: data_rate = 1260000. mux_rate = data_rate * 8
++               AddOption(wxT("muxrate"), wxT("4100000")); // from mplex project: data_rate = 1260000. mux_rate = data_rate * 8
+                
+                if (m_videoFilters.length())
+                        AddOption(wxT("vf"), m_videoFilters);

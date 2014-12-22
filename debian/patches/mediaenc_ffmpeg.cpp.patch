@@ -1,0 +1,20 @@
+Description: Fixes muxrate out of range
+ Fixes avconv muxrate value that is out of range.
+Author: Iván Hoffmann <digital.h@gmail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+--- a/src/mediaenc_ffmpeg.cpp.orig      2014-09-10 14:31:54.000000000 -0300
++++ b/src/mediaenc_ffmpeg.cpp   2014-12-22 16:06:57.964999207 -0300
+@@ -137,7 +137,7 @@ bool wxFfmpegMediaEncoder::BeginEncode(c
+        // write the stream header
+        AVDictionary *opts = NULL;
+        av_dict_set(&opts, "packet_size", "2048", 0);
+-       av_dict_set(&opts, "muxrate", "10080000", 0);
++       av_dict_set(&opts, "muxrate", "4100000", 0);
+        char tmpstr[48];
+        snprintf(tmpstr, sizeof(tmpstr), "%i", (int)(0.5 * AV_TIME_BASE));
+        av_dict_set(&opts, "preload", tmpstr, 0);
