@@ -1,5 +1,5 @@
-Description: Change mkisofs for genisoimage
- Change ....
+Description: Changes default applications
+ Changes mkisofs to genisoimage for generating iso images and xine for VLC.
 Author: Iván Hoffmann <digital.h@gmail.com>
 
 ---
@@ -8,7 +8,16 @@ checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
 are templates for supplementary fields that you might want to add:
 
 --- a/src/Config.h.orig	2014-02-25 07:58:28.000000000 -0300
-+++ b/src/Config.h	2014-12-19 16:14:41.568070631 -0300
++++ b/src/Config.h	2014-12-22 11:58:32.445828084 -0300
+@@ -64,7 +64,7 @@ const int DEF_DVD_RESERVED_SPACE = 0; //
+ 	const wxString DEF_ADD_ECC_CMD   = _T("dvdisaster -mRS02 -n dvd -c -i \"$FILE\"");
+ #else
+ 	const bool DEF_PREVIEW_DO        = true;
+-	const wxString DEF_PREVIEW_CMD   = _T("xine \"dvd:/$DIR\"");
++	const wxString DEF_PREVIEW_CMD   = _T("vlc \"dvd:/$DIR\"");
+ 	const wxString DEF_BURN_DEVICE   = _T("/dev/dvd");
+ 	const wxString DEF_ADD_ECC_CMD   = _T("dvdisaster -mRS02 -n dvd -c -i \"$FILE\"");
+ #endif
 @@ -78,8 +78,8 @@ const wxString DEF_AVCONV_CMD    = _T("a
  const wxString DEF_MPLEX_CMD     = _T("mplex -f 8 -S 0 -M -V -o \"$FILE_OUT\" \"$FILE_VIDEO\" \"$FILE_AUDIO\"");
  const wxString DEF_SPUMUX_CMD    = _T("spumux -P -s $STREAM \"$FILE_CONF\"");
