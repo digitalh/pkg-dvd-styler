@@ -1,3 +1,9 @@
+dvd-styler (2.9b2-1) UNRELEASED; urgency=medium
+
+  * Cambio a codigo fuente de 2.9b2 por errores insalvables en versión anterior.
+
+ -- Ivan Hoffmann <digitalh@huayra>  Tue, 23 Dec 2014 12:40:54 -0300
+
 dvd-styler (2.8-2) torbellino; urgency=medium
 
   * Parche para cambiar mkisofs por genisoimage y xine por vlc.
