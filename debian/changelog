@@ -1,17 +1,24 @@
-dvd-styler (2.9b2-1) UNRELEASED; urgency=medium
+dvd-styler (2.9b2-2) torbellino; urgency=medium
+
+  * Se agregó mjpegtools como dependencia.
+
+ -- Ivan Hoffmann <digital.h@gmail.com>  Fri, 06 Mar 2015 16:01:08 -0300
+
+dvd-styler (2.9b2-1) torbellino; urgency=medium
 
   * Cambio a codigo fuente de 2.9b2 por errores insalvables en versión anterior.
+  * Agregado de dependencias faltantes.
 
- -- Ivan Hoffmann <digitalh@huayra>  Tue, 23 Dec 2014 12:40:54 -0300
+ -- Ivan Hoffmann <digital.h@gmail.com>  Tue, 23 Dec 2014 12:40:54 -0300
 
 dvd-styler (2.8-2) torbellino; urgency=medium
 
   * Parche para cambiar mkisofs por genisoimage y xine por vlc.
 
- -- Ivan Hoffmann <digitalh@huayra>  Mon, 22 Dec 2014 12:04:05 -0300
+ -- Ivan Hoffmann <digital.h@gmail.com>  Mon, 22 Dec 2014 12:04:05 -0300
 
 dvd-styler (2.8-1) unstable; urgency=medium
 
   * Initial release. (Closes: #XXXXXX)
 
- -- Ivan Hoffmann <digitalh@huayra>  Thu, 18 Dec 2014 15:02:16 -0300
+ -- Ivan Hoffmann <digital.h@gmail.com>  Thu, 18 Dec 2014 15:02:16 -0300

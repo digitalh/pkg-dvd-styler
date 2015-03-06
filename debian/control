@@ -2,18 +2,22 @@ Source: dvd-styler
 Section: video
 Priority: extra
 Maintainer: Iván Hoffmann <digital.h@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), dvdauthor, libavcodec-dev, libavformat-dev,
-    libavfilter-dev, libexif-dev, libwxgtk3.0-dev, libwxgtk-media3.0-dev, 
-    libwxsvg-dev, libxine2-dev, flex, libav-tools, xmlto, libudev-dev, zip,
-    genisoimage, growisofs, libjpeg-dev, libavutil-dev
+Build-Depends: debhelper (>= 8.0.0), dvdauthor, libavcodec-dev (>= 6:11-2), 
+    libavformat-dev (>= 6:11-2), libavfilter-dev (>= 6:11-2), libexif-dev,
+    libwxgtk3.0-dev, libwxgtk-media3.0-dev, libwxsvg-dev, libxine2-dev, flex,
+    libav-tools, xmlto, libudev-dev, zip, genisoimage, growisofs, libjpeg-dev,
+    libavutil-dev
 Standards-Version: 3.9.3
 Homepage: http://www.dvdstyler.org/
 Vcs-Git: https://github.com/digitalh/pkg-dvd-styler.git
 Vcs-Browser: https://github.com/digitalh/pkg-dvd-styler
 
 Package: dvd-styler
-Architecture: all
-Depends: ${misc:Depends}
+Architecture: i386 amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, dvdauthor, libav-tools, xine-ui,
+    growisofs, genisoimage, dvd+rw-tools, libavcodec56, libavformat56, 
+    libavfilter5, libwxgtk3.0-0, libwxgtk-media3.0-0, libexif12, libjpeg62-turbo,
+    libwxsvg2, libudev1, mjpegtools
 Description: DVDStyler is a DVD authoring application.
  DVDStyler is a cross-platform free DVD authoring application for the creation
  of professional-looking DVDs. It allows not only burning of video files on DVD
