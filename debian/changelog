@@ -1,4 +1,4 @@
-dvd-styler (2.9b2-2) torbellino; urgency=medium
+dvd-styler (2.9.2-1) torbellino; urgency=medium
 
   * Se agregó mjpegtools como dependencia.
 

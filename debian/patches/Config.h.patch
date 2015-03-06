@@ -1,6 +1,6 @@
---- a/src/Config.h.orig	2014-11-16 12:08:42.000000000 -0300
-+++ b/src/Config.h	2014-12-23 12:27:29.369069078 -0300
-@@ -79,8 +79,8 @@ const wxString DEF_AVCONV_CMD    = _T("a
+--- a/src/Config.h.orig	2015-02-15 11:33:34.000000000 -0300
++++ b/src/Config.h	2015-03-06 16:36:31.756484976 -0300
+@@ -74,8 +74,8 @@ const wxString DEF_AVCONV_CMD    = _T("a
  const wxString DEF_MPLEX_CMD     = _T("mplex -f 8 -S 0 -M -V -o \"$FILE_OUT\" \"$FILE_VIDEO\" \"$FILE_AUDIO\"");
  const wxString DEF_SPUMUX_CMD    = _T("spumux -P -s $STREAM \"$FILE_CONF\"");
  const wxString DEF_DVDAUTHOR_CMD = _T("dvdauthor -o \"$DIR\" -x \"$FILE_CONF\"");
